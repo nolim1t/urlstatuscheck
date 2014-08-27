@@ -51,12 +51,12 @@ http_get_status = (info, cb) ->
 			res.setEncoding()
 			res.on 'data', (chunk) ->
 				res.destroy();
-				cb {meta: {code: 200, msg: 'OK'}, result: true, extradetail: {data: JSON.stringify(chunk), length: chunk.length}}
+				cb {meta: {status: 200, msg: 'OK'}, result: true, extradetail: {data: JSON.stringify(chunk), length: chunk.length}}
 
 		req.on 'error', (e) ->
-			cb {meta: {code: 500, msg: 'Connection error'}, result: false, extradetail: e}
+			cb {meta: {status: 500, msg: 'Connection error'}, result: false, extradetail: e}
 	else
-		cb {meta: {code: 400, msg: 'Must specify a URL'}}
+		cb {meta: {status: 400, msg: 'Must specify a URL'}}
 
 module.exports = {
 	check: check_url_status,
