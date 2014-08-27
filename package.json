@@ -18,8 +18,7 @@
         "lib": "lib"
     },
     "dependencies": {
-        "coffee-script": "1.2.0",
-        "vows": "v0.7.0"
+        "coffee-script": "1.2.0"
     },
     "engines": {
         "node": ">=0.10.28",
