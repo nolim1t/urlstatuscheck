@@ -45,6 +45,17 @@ check_url_status = (info, cb) ->
 	else
 		cb {meta: {code: 400, msg: 'Must specify a URL'}}
 
+http_get_status = (info, cb) ->
+	if info.url != undefined
+		req = http.get info.url, (res) ->
+			res.setEncoding()
+			res.on 'data', (chunk) ->
+				res.destroy();
+				cb {meta: {code: 200, msg: 'OK'}, result: true, extradetail: {data: JSON.stringify(chunk), length: chunk.length}}
+	else
+		cb {meta: {code: 400, msg: 'Must specify a URL'}}
+
 module.exports = {
-	check: check_url_status
+	check: check_url_status,
+	getcheck: http_get_status
 }
