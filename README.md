@@ -12,9 +12,7 @@ npm install urlstatuscheck
 
 ## Usage
 
-```node.js
-var urlstatuscheck = require("urlstatuscheck").check;
-
-urlstatuscheck({url: ""}, function(cb) { console.log(cb); });
-
+```coffee-script
+urlstatuscheck = require("urlstatuscheck").check;
+urlstatuscheck {url: ""}, (cb) -> console.log cb
 ```
