@@ -6,7 +6,7 @@
     "type": "git",
     "url": "git://github.com/nolim1t/urlstatuscheck.git"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Barry Teoh <bt@perceptionz.net>",
   "keywords": [
     "networking",
