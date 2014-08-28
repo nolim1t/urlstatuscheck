@@ -11,8 +11,19 @@ npm install urlstatuscheck
 ```
 
 ## Usage
+Only coffeescript works for now :) Sorry.
+
+### Statuscheck
 
 ```coffee-script
 urlstatuscheck = require("urlstatuscheck").check;
 urlstatuscheck {url: ""}, (cb) -> console.log cb
 ```
+
+### Get Check
+
+```coffee-script
+urlstatuscheck = require("urlstatuscheck").getcheck;
+urlstatuscheck {url: ""}, (cb) -> console.log cb
+```
+
