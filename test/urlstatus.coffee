@@ -7,7 +7,7 @@ vows.describe("URL Status API").addBatch({
 	'Test HTTP HEAD request functionality': {
 		topic: () ->
 			result = ''
-			result = exec('coffee bin/statuscheck.coffee "http://www.apple.com"').output.replace('\n','')
+			result = exec('coffee bin/statuscheck.coffee "http://www.apple.com"', {silent:true}).output.replace('\n','')
 			return result
 		'is working properly': (topic) -> assert.equal topic, '200'
 	}
@@ -15,7 +15,7 @@ vows.describe("URL Status API").addBatch({
 	'Test initial download HTTP GET request functionality': {
 		topic: () ->
 			result = ''
-			result = exec('coffee bin/getstatuscheck.coffee "http://www.apple.com"').output.replace('\n','')
+			result = exec('coffee bin/getstatuscheck.coffee "http://www.apple.com"', {silent:true}).output.replace('\n','')
 			return result
 		'is working properly': (topic) -> assert.equal topic, 'true'
 	}
