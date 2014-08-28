@@ -1,4 +1,5 @@
 # urlstatuscheck
+[![Build Status](https://travis-ci.org/nolim1t/urlstatuscheck.svg)](https://travis-ci.org/nolim1t/urlstatuscheck)
 
 ## What
 
